@@ -1,0 +1,13 @@
+- sway
+- waybar
+- dunst
+- wofi
+- kitty
+- zathura
+- firefox
+- networkmanager_dmenu
+- nvim
+- uv
+- fish
+- fisher
+- nvm.fish [here](https://github.com/jorgebucaran/nvm.fish)

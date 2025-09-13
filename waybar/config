@@ -1,0 +1,127 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 4,
+  "margin-top": 4,
+  "margin-left": 4,
+  "margin-right": 4,
+  "modules-left": [
+    "sway/window",
+    "mpris",
+  ],
+  "modules-center" : [
+    "sway/workspaces",
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "clock",
+  ],
+  "sway/workspaces": {
+    "format" : "{name}",
+    "sort-by-number" : true,
+    "on-click": "activate",
+  },
+  "sway/window": {
+    "format": "{title}",
+    "max-length": 50,
+    "rewrite": {
+       "(.*) — Mozilla Firefox": "<span color=\"#FF79C6\">󰈹</span> $1",
+       "nvim (.*)": "<span color=\"#FF79C6\"></span> $1",
+       "Spotify Premium" :  "<span color=\"#FF79C6\"> </span>Spotify"
+    }
+  },
+  "clock": {
+    "format": "<span color=\"#FF79C6\"></span> {:%H:%M}",
+    "format-alt": "<span color=\"#FF79C6\"> </span>{:%a %d %b %H:%M:%S}",
+    "tooltip-format": "<big><span color=\"#FF79C6\">{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+    "interval" : 1
+  },
+  "tray": {
+    "spacing": 4
+  },
+  "mpris": {
+     "format": "<span color=\"#FF79C6\">{player_icon}</span> {dynamic}",
+     "format-paused": "{status_icon} <i>{dynamic}</i>",
+     "player-icons": {
+     	"default": "▶",
+     	"mpv": "🎵",
+	"spotify" : " ",
+     },
+     "status-icons": {
+     	"paused": "⏸"
+     },
+     "title-len" : 15,
+     "dynamic-len" : 30,
+     "dynamic-importance-order" : ["title", "artist", "length", "album", "position"],
+     "interval" : 1,
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "<span color=\"#FF79C6\"> </span>{usage}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 1,
+    "format": "<span color=\"#FF79C6\"> </span>{used:0.1f}G"
+  },
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "<span color=\"#FF79C6\"> </span> {essid}",
+    "format-ethernet": "<span color=\"#FF79C6\">󰊗 </span>{ipaddr}/{cidr} ",
+    "format-disconnected": "<span color=\"#FF79C6\"> </span>Disconnected", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "bluetooth": {
+    "format": "<span color=\"#FF79C6\"></span> {status}",
+    "format-connected": "<span color=\"#FF79C6\"></span>|{device_alias}",
+    "format-connected-battery": "<span color=\"#FF79C6\"></span> {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click" : "blueman-manager"
+  },
+  "pulseaudio": {
+    "format": "<span color=\"#FF79C6\">{icon}</span> {volume}%",
+    "format-bluetooth": "<span color=\"#FF79C6\">{icon}</span> {volume}%",
+    "format-muted": "<span color=\"#FF79C6\">󰝟</span> Mute",
+    "format-icons": {
+        "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+        "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right" : "pwvucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 10,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "<span color=\"#FF79C6\">{icon}</span> {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+}
