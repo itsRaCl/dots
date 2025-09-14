@@ -6,6 +6,7 @@
 - Arch Linux
 - pacman (duh!)
 - [yay](https://github.com/Jguer/yay.git)
+- hyfetch
 
 ## Display Manager & Related 
 - sway
@@ -38,10 +39,25 @@
 - uv (python version management)
 
 ## Media Player 
-- [Spotify Launcher](https://github.com/kpcyrd/spotify-launcher)
+- spotify-launcher 
 - mpv
 - imv
 
-## Editing
+## Editing & Creating 
 - kdenlive
 - gimp
+- xournalpp
+
+## Documents
+- zathura
+- libreoffice
+
+## File Explorer
+- Nautilus (gui)
+- ranger (tui)
+
+## Misc
+- btop
+- tree
+- ripgrep
+- fzf
