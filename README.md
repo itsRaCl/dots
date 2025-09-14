@@ -12,7 +12,11 @@
 - waybar
 - dunst
 - wofi
+- PipeWire 
+- pwvucontrol
+- gtklock
 - networkmanager_dmenu
+- blueman
 
 ## Terminal & Shell
 - kitty
@@ -32,3 +36,12 @@
 - lazygit
 - docker (-compose, -buildx)
 - uv (python version management)
+
+## Media Player 
+- [Spotify Launcher](https://github.com/kpcyrd/spotify-launcher)
+- mpv
+- imv
+
+## Editing
+- kdenlive
+- gimp
