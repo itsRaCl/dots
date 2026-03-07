@@ -1,3 +1,25 @@
 default_border pixel 2
 gaps inner 5
 gaps outer 10 
+
+# SwayFX Features
+corner_radius 12
+shadows enable
+shadow_blur_radius 20
+shadow_color #00000077
+
+blur enable
+blur_passes 3
+blur_radius 7
+
+# Dim inactive windows slightly for better focus
+default_dim_inactive 0.15
+
+# Apply effects to Waybar and Dunst layers
+layer_effects "waybar" blur enable
+layer_effects "waybar" shadows enable
+layer_effects "waybar" corner_radius 12
+
+layer_effects "notifications" blur enable
+layer_effects "notifications" shadows enable
+layer_effects "notifications" corner_radius 12

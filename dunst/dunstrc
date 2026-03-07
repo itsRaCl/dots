@@ -33,7 +33,7 @@
     origin = bottom-right
 
     # Offset from the origin
-    offset = (10,50)
+    offset = (20, 60)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -68,18 +68,18 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 15
+    transparency = 10
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 1
+    separator_height = 2
 
     # Padding between text and separator.
-    padding = 8
+    padding = 12
 
     # Horizontal padding.
-    horizontal_padding = 10
+    horizontal_padding = 12
 
     # Padding between text and icon.
     text_icon_padding = 0
@@ -111,7 +111,7 @@
 
     ### Text ###
 
-    font = Monospace 10
+    font = FiraCode Nerd Font 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -229,7 +229,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
+    corner_radius = 12
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this

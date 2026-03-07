@@ -2,49 +2,63 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: JetBrainsMono Nerd Font;
+    font-family: FiraCode Nerd Font;
     font-size: 11pt;
     min-height: 0;
-    background: none;
 }
+
+window#waybar {
+    background: rgba(40, 42, 54, 0.3); /* 30% opacity for a true glass look */
+    border: 1px solid @pink;
+    border-radius: 12px;
+    color: @foreground;
+}
+
 #workspaces button {
     padding: 0 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: @foreground;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
 }
+
 #workspaces button:hover {
-	color: @foreground;
+    background: rgba(255, 121, 198, 0.1);
 }
+
 #workspaces button.focused,
 #workspaces button.active {
     color: @pink;
+    background: rgba(189, 147, 249, 0.15);
 }
+
 #workspaces button.urgent {
     background: @red;
-}
-window#waybar.empty #window{
-    border: none;
+    color: @background;
 }
 
-#clock,#workspaces,#window,#mpris,#cpu, #memory,#network,#bluetooth,#pulseaudio,#battery {
-    padding: 0 8px;
-    border: 1px solid @pink;
-    border-radius: 8px;
-    color: @foreground;
+/* Modules now share the main bar's background */
+#clock, #mpris, #cpu, #memory, #network, #bluetooth, #pulseaudio, #battery {
+    padding: 0 12px;
+}
+
+#window {
+    color: @purple;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+window#waybar.empty #window {
+    padding: 0;
+    margin: 0;
+}
+
+tooltip {
     background: @background;
+    border: 1px solid @purple;
+    border-radius: 10px;
 }
 
-#workspaces{
-    padding: 0 8px;
-}
-
-
-tooltip{
-	background:@background;
-}
-
-window#waybar.empty #window{
-	padding: 0;
-	margin: 0;
-	border: 0;
-	background: transparent;
+tooltip label {
+    color: @foreground;
 }

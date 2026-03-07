@@ -3,3 +3,6 @@ for_window [title="Smile"] floating enable
 for_window [title="^Meet - [a-z]{3}-[a-z]{3,4}-[a-z]{3}$"] floating enable, sticky on
 
 for_window [title="Picture-in-Picture"] floating enable, sticky on
+
+# Firefox Glass Effect (requires about:config tweaks)
+for_window [app_id="firefox"] opacity 0.95

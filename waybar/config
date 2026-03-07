@@ -8,10 +8,10 @@
   "margin-right": 4,
   "modules-left": [
     "sway/window",
-    "mpris",
+    "mpris"
   ],
   "modules-center" : [
-    "sway/workspaces",
+    "sway/workspaces"
   ],
   "modules-right": [
     "cpu",
@@ -20,7 +20,7 @@
     "bluetooth",
     "pulseaudio",
     "battery",
-    "clock",
+    "clock"
   ],
   "sway/workspaces": {
     "format" : "{name}",
@@ -51,7 +51,7 @@
      "player-icons": {
      	"default": "▶",
      	"mpv": "🎵",
-	"spotify" : " ",
+	"spotify" : " "
      },
      "status-icons": {
      	"paused": "⏸"
@@ -59,7 +59,7 @@
      "title-len" : 15,
      "dynamic-len" : 30,
      "dynamic-importance-order" : ["title", "artist", "length", "album", "position"],
-     "interval" : 1,
+     "interval" : 1
   },
   "cpu": {
     "interval": 1,
@@ -123,5 +123,5 @@
     "format": "<span color=\"#FF79C6\">{icon}</span> {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25
-  },
+  }
 }
