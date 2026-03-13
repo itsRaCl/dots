@@ -11,7 +11,7 @@ set $right l
 # Your preferred terminal emulator
 set $term kitty
 # Your preferred application launcher
-set $menu wofi
+set $menu rofi
 
 
 #
@@ -24,9 +24,13 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 
 # Start your launcher
-bindsym $mod+d exec $menu --show drun
+bindsym $mod+d exec $menu -show drun
 
-bindsym $mod+r exec $menu --show run
+bindsym $mod+r exec $menu -show run
+
+bindsym $mod+v exec cliphist list | $menu -dmenu | cliphist decode | wl-copy
+
+bindsym $mod+b exec ~/.config/scripts/rofi_bluetooth.sh
 
 bindsym $mod+End exec gtklock -d
 
@@ -98,8 +102,8 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+backslash splith
+bindsym $mod+bar splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking

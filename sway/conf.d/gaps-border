@@ -23,3 +23,7 @@ layer_effects "waybar" corner_radius 12
 layer_effects "notifications" blur enable
 layer_effects "notifications" shadows enable
 layer_effects "notifications" corner_radius 12
+
+layer_effects "rofi" blur enable
+layer_effects "rofi" shadows enable
+layer_effects "rofi" corner_radius 12
