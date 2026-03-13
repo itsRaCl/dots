@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background: rgba(40, 42, 54, 0.3); /* 30% opacity for a true glass look */
+    background: rgba(40, 42, 54, 0.3); /* Transparent Dracula background */
     border: 1px solid @pink;
     border-radius: 12px;
     color: @foreground;
@@ -37,9 +37,30 @@ window#waybar {
     color: @background;
 }
 
-/* Modules now share the main bar's background */
-#clock, #mpris, #cpu, #memory, #network, #bluetooth, #pulseaudio, #battery {
-    padding: 0 12px;
+/* Reduced padding for modules to move items closer together */
+#clock, #mpris, #cpu, #memory, #network, #bluetooth, #pulseaudio, #battery, #custom-audio_idle_inhibitor {
+    padding: 0 6px;
+}
+
+#battery.warning:not(.charging) {
+    color: @orange; /* Dracula Orange for warning */
+    background: transparent;
+}
+
+#battery.critical:not(.charging) {
+    color: @red; /* Dracula Red for critical */
+    background: transparent;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: @foreground;
+    }
 }
 
 #window {
