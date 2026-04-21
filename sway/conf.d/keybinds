@@ -2,7 +2,7 @@
 # Keybind Variables
 #
 
-set $mod Mod1
+set $mod Mod4
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -164,6 +164,8 @@ bindsym --locked $mod+period exec smile
 bindsym $mod+Shift+b exec firefox
 
 bindsym $mod+n exec networkmanager_dmenu
+
+bindsym $mod+Shift+s exec spotify-launcher
 
 #
 # Utilities:
