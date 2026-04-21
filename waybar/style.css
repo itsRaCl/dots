@@ -42,7 +42,7 @@ window#waybar {
     padding: 0 6px;
 }
 
-#battery.warning:not(.charging) {
+#battery.warning{
     color: @orange; /* Dracula Orange for warning */
     background: transparent;
 }
@@ -55,6 +55,11 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#battery.critical.charging {
+    color: @red; /* Dracula Red for critical */
+    background: transparent;
 }
 
 @keyframes blink {
